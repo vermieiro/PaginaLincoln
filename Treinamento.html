@@ -1,0 +1,212 @@
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css"  href="csscontato.css" />
+		<title> Treinamento Sertao e SuperPRO</title>
+		<script src="./checkbox.php_files/ca-pub-1106356969081786.js"></script><script type="text/javascript">
+	function maximoCheckboxarCheckbox(nome, maximoCheckbox){
+    for (var i=0; i<nome.length; i++){
+        nome[i].onclick=function(){
+        var num_marcados=0;
+        for (var i=0; i<nome.length; i++)
+            num_marcados+=(nome[i].checked)? 1 : 0
+        if (num_marcados>maximoCheckbox){
+            alert("O numero maximo de elementos que podem ser selecionados  "+maximoCheckbox+"");
+            this.checked=false;
+            }
+		}
+    }
+}
+</script>
+<script>
+
+    // fix for IE < 11
+    if ($("<input />").prop("required") === undefined) {
+        $(document).on("submit", function(e) {
+            $(this)
+                    .find("input, select, textarea")
+                    .filter("[required]")
+                    .filter(function() { return this.value == ''; })
+                    .each(function() {
+                        e.preventDefault();
+                        $(this).css({ "border-color":"red" });
+                        alert( $(this).prev('label').html() + " is required!");
+                    });
+        });
+
+    }
+</script>
+	</head>
+	<img src="http://192.168.10.35/blog/wp-content/uploads/2015/08/Rede_Azul.png">
+	<body>
+		<div class="bodyii">
+			<div class="but3">
+				<form name="categorias" method="post" action="http://192.168.10.35/blog/Treinamento/contato.php">
+					<p>Nome: <input type="text" id="nome" name="nome" size="35" required="required" /><br /></p>
+					<br>
+					<p>Email : <input type="text" id="email" name="email" size="35" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"  /><br></p>
+					<br>
+					<p>Filial:&nbsp;&nbsp;   
+						<select name="filial" required >
+							<option value=""></option>
+							<option value="Matriz" >Matriz</option>
+							<option value="Coronel" >Coronel</option>
+							<option value="Dourados">Dourados</option>
+							<option value="Ribas">Ribas</option>
+							<option value="Paranaiba">Paranaiba</option>
+							<option value="Ype">Ype</option>
+							<option value="Aquidauana">Aquidauana</option>
+							<option value="SuperPRO">SuperPRO</option>
+							<option value="Brilhante">Brilhante</option>
+							<option value="P.Vargas">P.Vargas</option>
+							<option value="T.Lagoas">T.Lagoas</option>
+						</select>
+					<br>
+					<br>
+					<p>Escolha abaixo <b>25</b> (vinte e cinco) segmentos de produtos que voc&ecirc; mais se interessaria para melhorar seus conhecimentos.</p>
+					<br>
+					<br>
+					<p>
+					<table>
+							<tr>
+								<th colspan="2" style="color: white;">Stihl</th>
+								<th colspan="2" style="color: white;">M&aacute;quinas e Equipamentos</th>
+								<th colspan="2" style="color: white;">Ferramentas El&eacute;tricas</th>
+								<th colspan="2" style="color: white;">Agr&iacute;cola e Pecu&aacute;ria</th>
+							</tr><tr>
+							<tr>
+							<td style="width: 1%";><input type="checkbox" id="vale" name="vale[]" value="Rocadeiras"></td><td style="width: 15%;">Ro&ccedil;adeiras</td>
+							<td style="width: 1%";><input type="checkbox" id="vale" name="vale[]" value="Betoneiras"></td><td style="width: 15%;">Betoneiras</td>
+							<td style="width: 1%";><input type="checkbox" id="vale" name="vale[]" value="Furadeiras"></td><td style="width: 15%;">Furadeiras</td>
+							<td style="width: 1%";><input type="checkbox" id="vale" name="vale[]" value="Telas de aco"></td><td style="width: 15%;">Telas de a&ccedil;o</td>
+							</tr><tr>
+							<td style="width: 1%";><input type="checkbox" id="vale" name="vale[]" value="Motoserras"></td><td style="width: 15%;">Motoserras</td>
+							<td style="width: 1%";><input type="checkbox" id="vale" name="vale[]" value="Enceradeiras"></td><td style="width: 15%;">Enceradeiras</td>
+							<td style="width: 1%";><input type="checkbox" id="vale" name="vale[]" value="Desbastar/polir/lixar"></td><td style="width: 15%;">Desbastar/polir/lixar</td>
+							<td style="width: 1%";><input type="checkbox" id="vale" name="vale[]" value="Arames de aco p/ cercas"></td><td style="width: 15%;">Arames de a&ccedil;o p/ cercas</td>
+							</tr><tr>
+							<td style="width: 1%";><input type="checkbox" id="vale" name="vale[]" value="Perfurador de madeira"></td><td style="width: 15%;">Perfurador de madeira</td>
+							<td style="width: 1%";><input type="checkbox" id="vale" name="vale[]" value="Cortadores de piso"></td><td style="width: 15%;">Cortadores de piso</td>
+							<td style="width: 1%";><input type="checkbox" id="vale" name="vale[]" value="Martelete/rompedor/demolido"></td><td style="width: 15%;">Martelete/rompedor/demolidor</td>
+							<td style="width: 1%";><input type="checkbox" id="vale" name="vale[]" value="Ferragens Inka"></td><td style="width: 15%;">Ferragens Inka</td>
+							</tr><tr>
+							<td style="width: 1%";><input type="checkbox" id="vale" name="vale[]" value="Motopoda"></td><td style="width: 15%;">Motopoda</td>
+							<td style="width: 1%";><input type="checkbox" id="vale" name="vale[]" value="Guincho coluna"></td><td style="width: 15%;">Guincho coluna</td>
+							<td style="width: 1%";><input type="checkbox" id="vale" name="vale[]" value="Parafusadeiras/chaves"></td><td style="width: 15%;">Parafusadeiras/chaves</td>
+							<td style="width: 1%";><input type="checkbox" id="vale" name="vale[]" value="Pulverizadores"></td><td style="width: 15%;">Pulverizadores</td>
+							</tr><tr>
+							<td style="width: 1%";><input type="checkbox" id="vale" name="vale[]" value="Soprador"></td><td style="width: 15%;">Soprador</td>
+							<td style="width: 1%";><input type="checkbox" id="vale" name="vale[]" value="Talhas"></td><td style="width: 15%;">Talhas</td>
+							<td style="width: 1%";><input type="checkbox" id="vale" name="vale[]" value="Corte em construcao"></td><td style="width: 15%;">Corte em constru&ccedil;&atilde;o</td>
+							<td style="width: 1%";><input type="checkbox" id="vale" name="vale[]" value="Trituradores"></td><td style="width: 15%;">Trituradores</td>
+							</tr><tr>
+							<td style="width: 1%";><input type="checkbox" id="vale" name="vale[]" value="Perfurador de solo"></td><td style="width: 15%;">Perfurador de solo</td>
+							<td style="width: 1%";><input type="checkbox" id="vale" name="vale[]" value="Motores eletricos"></td><td style="width: 15%;">Motores el&eacute;tricos</td>
+							<td style="width: 1%";><input type="checkbox" id="vale" name="vale[]" value="Corte em metal"></td><td style="width: 15%;">Corte em metal</td>
+							<td style="width: 1%";><input type="checkbox" id="vale" name="vale[]" value="Motocultivadores"></td><td style="width: 15%;">Motocultivadores</td>
+							</tr><tr>
+							<td style="width: 1%";><input type="checkbox" id="vale" name="vale[]" value="Lavadoras alta pressao"></td><td style="width: 15%;">Lavadoras alta press&atilde;o</td>
+							<td style="width: 1%";><input type="checkbox" id="vale" name="vale[]" value="Geradores a gasolina/diesel"></td><td style="width: 15%;">Geradores &agrave; gasolina/diesel</td>
+							<td style="width: 1%";><input type="checkbox" id="vale" name="vale[]" value="Serras"></td><td style="width: 15%;">Serras</td>
+							<td style="width: 1%";><input type="checkbox" id="vale" name="vale[]" value="Microtrator"></td><td style="width: 15%;">Microtrator</td>
+							</tr><tr>
+							<td style="width: 1%";><input type="checkbox" id="vale" name="vale[]" value="Pulverizado"></td><td style="width: 15%;">Pulverizador</td>
+							<td style="width: 1%";><input type="checkbox" id="vale" name="vale[]" value="Lavadoras media pressao"></td><td style="width: 15%;">Lavadoras m&eacute;dia press&atilde;o</td>
+							<td style="width: 1%";><input type="checkbox" id="vale" name="vale[]" value="Plaina/Fresa/Tupia"></td><td style="width: 15%;">Plaina/Fresa/Tupia</td>
+							<td style="width: 1%";><input type="checkbox" id="vale" name="vale[]" value="Oleos e lubrificantes"></td><td style="width: 15%;">&Oacute;leos e lubrificantes</td>
+							</tr><tr>
+							<td></td><td></td>
+							<td style="width: 1%";><input type="checkbox" id="vale" name="vale[]" value="Compressores de ar"></td><td style="width: 15%;">Compressores de ar</td>
+							<td style="width: 1%";><input type="checkbox" id="vale" name="vale[]" value="Abrasivos"></td><td style="width: 15%;">Abrasivos</td>
+							<td style="width: 1%";><input type="checkbox" id="vale" name="vale[]" value="Irrigacao"></td><td style="width: 15%;">Irriga&ccedil;&atilde;o</td>
+							</tr><tr>
+							<td></td><td></td>
+							<td style="width: 1%";><input type="checkbox" id="vale" name="vale[]" value="Ferramentas pneumaticas"></td><td style="width: 15%;">Ferramentas pneum&aacute;ticas</td>
+							<td></td><td></td>
+							<td style="width: 1%";><input type="checkbox" id="vale" name="vale[]" value="Lonas - Leve/Lonil/Encerado"></td><td style="width: 15%;">Lonas - Leve/Lonil/Encerado</td>
+							</tr><tr>
+							<td></td><td></td>
+							<td style="width: 1%";><input type="checkbox" id="vale" name="vale[]" value="Aparadores de grama"></td><td style="width: 15%;">Aparadores de grama</td>
+							<td></td><td></td>
+							<td></td><td></td>
+							</tr><tr>
+							<td></td><td></td>
+							<td style="width: 1%";><input type="checkbox" id="vale" name="vale[]" value="Cortadores de grama"></td><td style="width: 15%;">Cortadores de grama</td>
+							<td></td><td></td>
+							<td></td><td></td>
+							</tr><tr>
+							<td></td><td></td>
+							<td style="width: 1%";><input type="checkbox" id="vale" name="vale[]" value="Maquinas de solda"></td><td style="width: 15%;">M&aacute;quinas de solda</td>
+							<td></td><td></td>
+							<td></td><td></td>
+							</tr><tr>
+							<td></td><td></td>
+							<td style="width: 1%";><input type="checkbox" id="vale" name="vale[]" value="Engenhos de cana"></td><td style="width: 15%;">Engenhos de cana</td>
+							<td></td><td></td>
+							<td></td><td></td>
+							</tr><tr>
+								<th colspan="2" style="color: white;">Bombas e Po&ccedil;os</th>
+								<th colspan="2" style="color: white;">Casa e Conforto</th>
+								<th colspan="3" style="color: white;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Constru&ccedil;&atilde;o e Acabamento</th>
+							</tr><tr>
+							<td style="width: 1%";><input type="checkbox" id="vale" name="vale[]" value="Bombas Toyama/Matsuyama"></td><td style="width: 15%;">Bombas Toyama/Matsuyama</td>
+							<td style="width: 1%";><input type="checkbox" id="vale" name="vale[]" value="Condicionador de ar"></td><td style="width: 15%;">Condicionador de ar</td>
+							<td style="width: 1%";><input type="checkbox" id="vale" name="vale[]" value="Tintas p/ alvenaria"></td><td style="width: 15%;">Tintas p/ alvenaria</td>
+							<td style="width: 1%";><input type="checkbox" id="vale" name="vale[]" value="Fios e condutores"></td><td style="width: 15%;">Fios e condutores</td>
+							</tr><tr>
+							<td style="width: 1%";><input type="checkbox" id="vale" name="vale[]" value="Bombas Rochfer"></td><td style="width: 15%;">Bombas Rochfer</td>
+							<td style="width: 1%";><input type="checkbox" id="vale" name="vale[]" value="Chuveiros e duchas"></td><td style="width: 15%;">Chuveiros e duchas</td>
+							<td style="width: 1%";><input type="checkbox" id="vale" name="vale[]" value="Esmaltes e vernizes"></td><td style="width: 15%;">Esmaltes e vernizes</td>
+							<td style="width: 1%";><input type="checkbox" id="vale" name="vale[]" value="Lampadas"></td><td style="width: 15%;">L&acirc;mpadas</td>
+							</tr><tr>
+							<td style="width: 1%";><input type="checkbox" id="vale" name="vale[]" value="Bombas submersas"></td><td style="width: 15%;">Bombas submersas</td>
+							<td style="width: 1%";><input type="checkbox" id="vale" name="vale[]" value="Aquecedor a gas"></td><td style="width: 15%;">Aquecedor &agrave; g&aacute;s </td>
+							<td style="width: 1%";><input type="checkbox" id="vale" name="vale[]" value="Texturas"></td><td style="width: 15%;">Texturas</td>
+							<td style="width: 1%";><input type="checkbox" id="vale" name="vale[]" value="Portas e janelas"></td><td style="width: 15%;">Portas e janelas</td>
+							</tr><tr>
+							<td style="width: 1%";><input type="checkbox" id="vale" name="vale[]" value="Bombas Anauger"></td><td style="width: 15%;">Bombas Anauger</td>
+							<td style="width: 1%";><input type="checkbox" id="vale" name="vale[]" value="Aquecedor solar"></td><td style="width: 15%;">Aquecedor solar</td>
+							<td style="width: 1%";><input type="checkbox" id="vale" name="vale[]" value="Impermeabilizacao"></td><td style="width: 15%;">Impermeabiliza&ccedil;&atilde;o</td>
+							<td style="width: 1%";><input type="checkbox" id="vale" name="vale[]" value="Tubos e conexoes de pvc"></td><td style="width: 15%;">Tubos e conex&otilde;es de pvc</td>
+							</tr><tr>
+							<td style="width: 1%";><input type="checkbox" id="vale" name="vale[]" value="Bombas multiestagios"></td><td style="width: 15%;">Bombas multiest&aacute;gios</td>
+							<td style="width: 1%";><input type="checkbox" id="vale" name="vale[]" value="Piscina - produto de tratamento"></td><td style="width: 15%;">Piscina - produto de tratamento</td>
+							<td style="width: 1%";><input type="checkbox" id="vale" name="vale[]" value="Porcelanatos"></td><td style="width: 15%;">Porcelanatos</td>
+							<td style="width: 1%";><input type="checkbox" id="vale" name="vale[]" value="Tubos e conexoes de cobre"></td><td style="width: 15%;">Tubos e conex&otilde;es de cobre</td>
+							</tr><tr>
+							<td style="width: 1%";><input type="checkbox" id="vale" name="vale[]" value="Bombas autoasp. e autoescor."></td><td style="width: 15%;">Bombas autoasp. e autoescor.</td>
+							<td style="width: 1%";><input type="checkbox" id="vale" name="vale[]" value="Porteiro e video porteiro"></td><td style="width: 15%;">Porteiro e v&iacute;deo porteiro</td>
+							<td style="width: 1%";><input type="checkbox" id="vale" name="vale[]" value="Pisos e revestimentos"></td><td style="width: 15%;">Pisos e revestimentos</td>
+							<td style="width: 1%";><input type="checkbox" id="vale" name="vale[]" value="Tubos e conexoes galvanizado"></td><td style="width: 15%;">Tubos e conex&otilde;es galvanizado</td>
+							</tr><tr>
+							<td style="width: 1%";><input type="checkbox" id="vale" name="vale[]" value="Bombas centrifugas"></td><td style="width: 15%;">Bombas centr&iacute;fugas</td>
+							<td style="width: 1%";><input type="checkbox" id="vale" name="vale[]" value="Autotransformador de voltagem"></td><td style="width: 15%;">Autotransformador de voltagem</td>
+							<td style="width: 1%";><input type="checkbox" id="vale" name="vale[]" value="Pastilhas"></td><td style="width: 15%;">Pastilhas</td>
+							<td style="width: 1%";><input type="checkbox" id="vale" name="vale[]" value="Interruptores e tomadas"></td><td style="width: 15%;">Interruptores e tomadas</td>
+							</tr><tr>
+							<td style="width: 1%";><input type="checkbox" id="vale" name="vale[]" value="Bombas injetoras"></td><td style="width: 15%;">Bombas injetoras</td>
+							<td style="width: 1%";><input type="checkbox" id="vale" name="vale[]" value="Sensor de presenca"></td><td style="width: 15%;">Sensor de presen&ccedil;a</td>
+							<td style="width: 1%";><input type="checkbox" id="vale" name="vale[]" value="Argamassa e rejunte"></td><td style="width: 15%;">Argamassa e rejunte</td>
+							<td style="width: 1%";><input type="checkbox" id="vale" name="vale[]" value="Valvula/boia/registro"></td><td style="width: 15%;">V&aacute;lvula/b&oacute;ia/registro</td>
+							</tr><tr>
+							<td style="width: 1%";><input type="checkbox" id="vale" name="vale[]" value="Bombas para piscina"></td><td style="width: 15%;">Bombas para piscina</td>
+							<td style="width: 1%";><input type="checkbox" id="vale" name="vale[]" value="Coifa/cooktop/forno"></td><td style="width: 15%;">Coifa/cooktop/forno</td>
+							<td style="width: 1%";><input type="checkbox" id="vale" name="vale[]" value="Metais"></td><td style="width: 15%;">Metais</td>
+							<td style="width: 1%";><input type="checkbox" id="vale" name="vale[]" value="Caixa d'agua"></td><td style="width: 15%;">Caixa d&rsquo;&aacute;gua</td>
+							</tr><tr>
+							<td style="width: 1%";><input type="checkbox" id="vale" name="vale[]" value="Geomecanicos p/pocos"></td><td style="width: 15%;">Geomec&acirc;nicos p/po&ccedil;os</td>
+							<td style="width: 1%";><input type="checkbox" id="vale" name="vale[]" value="Banheiras"></td><td style="width: 15%;">Banheiras</td>
+							<td style="width: 1%";><input type="checkbox" id="vale" name="vale[]" value="Loucas"></td><td style="width: 15%;">Lou&ccedil;as</td>
+							<td style="width: 1%";><input type="checkbox" id="vale" name="vale[]" value="Eletrica comercial/industrial"></td><td style="width: 15%;">El&eacute;trica comercial/industrial</td>
+							</tr><tr>							
+						</table>
+					<br>
+					<input type="submit" name="submit" id="submit"  value="Enviar"/>
+					<input type="reset" name="resetar" id="resetar" value="Limpar" onclick="Limpar" />
+				</form>
+			</div>
+		</div>
+		<script type="text/javascript">
+maximoCheckboxarCheckbox(document.forms.categorias.vale, 25);
+</script>
+	</body>
+</html>
